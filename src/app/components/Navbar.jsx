@@ -4,6 +4,7 @@ import { useState } from "react";
 import Hamburger from "../../../public/images/hamburger.png";
 import Close from "../../../public/images/close.png";
 import Image from "next/image";
+import Link from "next/link";
 export default function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -11,18 +12,21 @@ export default function Navbar() {
     setMobileMenuOpen(!isMobileMenuOpen);
   }
   return (
-    
     <div className="flex justify-between px-6 pb-2 lg:px-24 pt-12 bg-primary items-center h-24 w-full fixed z-10">
-      <h1 className="text-lg lg:text-2xl font-bold">
-        get<span className="text-secondary">linked</span>
-      </h1>
+      <Link href="/">
+        <h1 className="text-lg lg:text-2xl font-bold">
+          get<span className="text-secondary">linked</span>
+        </h1>
+      </Link>
 
       <div className="hidden lg:flex space-x-40">
         <ul className="flex space-x-8">
-          <li>Timeline</li>
-          <li>Overview</li>
-          <li>FAQs</li>
-          <li>Contact</li>
+          <li className="hover:text-secondary">Timeline</li>
+          <li className="hover:text-secondary">Overview</li>
+          <li className="hover:text-secondary">FAQs</li>
+          <Link href="/contact" className="hover:text-secondary">
+            <li>Contact</li>
+          </Link>
         </ul>
         <button className="w-36 py-2 px-4 rounded-sm font-light  bg-gradient-to-r from-secondary from-10%  to-tertiary to-90% ..">
           Register
@@ -49,7 +53,9 @@ export default function Navbar() {
             <li>Timeline</li>
             <li>Overview</li>
             <li>FAQs</li>
-            <li>Contact</li>
+            <Link href="/contact" className="hover:text-secondary">
+              <li>Contact</li>
+            </Link>
           </ul>
           <button className="mt-2 py-2 px-4 rounded-sm font-light  bg-gradient-to-r from-secondary from-10%  to-tertiary to-90% ..">
             Register
