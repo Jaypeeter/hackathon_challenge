@@ -28,9 +28,11 @@ export default function Navbar() {
             <li>Contact</li>
           </Link>
         </ul>
-        <button className="w-36 py-2 px-4 rounded-sm font-light  bg-gradient-to-r from-secondary from-10%  to-tertiary to-90% ..">
-          Register
-        </button>
+        <Link href="/login">
+          <button className="w-36 py-2 px-4 rounded-sm font-light  bg-gradient-to-r from-secondary from-10%  to-tertiary to-90% .. hover:bg-primary hover:border-secondary">
+            Register
+          </button>
+        </Link>
       </div>
       {isMobileMenuOpen ? (
         <Image
