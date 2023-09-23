@@ -1,5 +1,5 @@
 import Image from "next/image";
-import IntroImage from "../../public/images/intro-image.png";
+import IntroImage from "../../public/images/intro_image.png";
 import StarPurple from "../../public/images/star-purple.png";
 
 export default function Introduction() {

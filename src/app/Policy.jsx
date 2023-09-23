@@ -1,9 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import GreyStar from "../../public/images/grey-star.png";
-import PurpleStar from "../../public/images/star-purple.png";
 import Tick from "../../public/images/tick.png";
-import PolicyImage from "../../public/images/policy-image.png";
+import PolicyImage from "../../public/images/policy_image.png";
 
 export default function Policy() {
   return (
